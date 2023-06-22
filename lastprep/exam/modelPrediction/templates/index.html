@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <title>Predict</title>
+  </head>
+  <body class=" bg-light py-5">
+    <section  id="predict">
+      <div class="container">
+        <div class="row container ">
+          <div class="d-flex align-items-center justify-content-center" style="min-height: 50vh;">
+            <div class="card px-5 py-4 mx-auto" style="width: 100rem;">
+            <form action="result" method="POST" class="form-horizontal">
+              {% csrf_token %}
+                 
+              
+                <h1 class="text-center">Predict</h1>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >temperature</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="temperature"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Parasite density</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    
+                    name="parasite_density"
+                  />
+                
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >wbc_count</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="wbc_count"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >hb_level</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="hb_level"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >hematocrit</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="hematocrit"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >mean_cell_volume</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="mean_cell_volume"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >mean_corp_hb</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="mean_corp_hb"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >mean_cell_hb_conc</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="mean_cell_hb_conc"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >platelet_count</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="platelet_count"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >platelet_distr_width</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="platelet_distr_width"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >mean_platelet_vl</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="mean_platelet_vl"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >neutrophils_percent</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="neutrophils_percent"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >lymphocytes_percent</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="lymphocytes_percent"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >mixed_cells_percent</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="mixed_cells_percent"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >neutrophils_count</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="neutrophils_count"
+                  />
+                </div>
+
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >lymphocytes_count</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="lymphocytes_count"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >mixed_cells_count</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control "
+                    
+                    name="mixed_cells_count"
+                  />
+                </div>
+
+
+                <small class="pt-2"> <strong>NB: </strong> Fill the above form correctly to get predictions</small>
+                <div class="mb-1 text-center">
+                <input
+                type="submit"
+                class="btn btn-outline-dark mt-3"
+                name="prediction"
+                value="Get Prediction" />
+                </div>
+              
+  
+              
+            </form>
+              <div class="mt-4 mb-8">
+                <h2>Prediction result</h2>
+                <div>
+                  {% if prediction %}
+                  <div class="m-2 bg-dark text-light px-2">The Prediction Result:  <strong>{{prediction}}</strong></div>
+                {% else %}
+                  <div class="m-2 bg-danger text-light px-2">No Prediction Yet</div>
+                {% endif %}
+                </div>
+                  
+              </div>
+           
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
