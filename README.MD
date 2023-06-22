@@ -1,1 +1,1 @@
-This project predicts Malaria
+This project predicts Malaria cases
